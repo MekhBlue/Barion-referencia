@@ -1,0 +1,15 @@
+{
+    "name": "barion/barion-web-php",
+    "version": "1.0.0",
+    "description": "PHP libary for Barion Smart Gateway API integration",
+    "require": {
+        "php": ">=7.3",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": { "Barion\\client\\" : "library/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Barion\\client\\" : "library/" }
+    }
+}
