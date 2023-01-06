@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'barion.develoweb.hu';
+    public $baseURL = 'http://barion.develoweb.hu';
 
     /**
      * --------------------------------------------------------------------------
