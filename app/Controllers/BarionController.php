@@ -45,16 +45,18 @@ class BarionController extends BaseController
         $psr->PayerHint = "user@example.com";
         $psr->Locale = UILocale::EN;
         $psr->Currency = Currency::HUF;
+        $psr->RedirectUrl = "https://barion.develoweb.hu/orderafterpayment";
+        $psr->CallbackUrl = "https://barion.develoweb.hu/orderprocesspayment";
         $psr->OrderNumber = "ORDER-0001";
         $psr->AddTransaction($trans);
 
         $myPayment = $BC->PreparePayment($psr);
 
         if ($myPayment->RequestSuccessful === true) {
-            header("Location: " . BARION_WEB_URL_TEST . "?id=" . $myPayment->PaymentId);
+            return redirect()->to(BARION_WEB_URL_TEST . "?id=" . $myPayment->PaymentId);
         }
         else {
-            print_r($myPayment);
+            print_r($myPayment->RequestSuccessful);
         }
     }
 }

@@ -8,4 +8,14 @@ class Home extends BaseController
     {
         return view('welcome_message');
     }
+
+    public function orderafterpayment()
+    {
+        return view('orderafterpayment');
+    }
+
+    public function orderprocesspayment()
+    {
+        return view('orderprocesspayment');
+    }
 }
